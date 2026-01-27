@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    container_name: my_api
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - TRUST_PROXY=true
+      - LOG_FORMAT=combined
+    ports:
+      - "3000:3000"

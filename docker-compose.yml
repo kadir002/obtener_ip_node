@@ -7,5 +7,5 @@ services:
       - PORT=3000
       - TRUST_PROXY=true
       - LOG_FORMAT=combined
-    ports:
-      - "3000:3000"
+    expose:
+      - "3000"

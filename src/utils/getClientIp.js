@@ -14,6 +14,8 @@ function parseForwardedFor(headerValue) {
 export function getClientIp(req, trustProxy) {
   if (trustProxy) {
     const forwarded = req.headers["x-forwarded-for"];
+
+    
     if (typeof forwarded === "string") {
       return cleanIp(parseForwardedFor(forwarded));
     }
